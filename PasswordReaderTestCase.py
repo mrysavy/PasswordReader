@@ -1,6 +1,6 @@
 import unittest
-from cz.rysavi.PasswordReader.PasswordReader import *
-from cz.rysavi.PasswordReader.Modules import ValueModule
+from passwordreader.PasswordReader import *
+from passwordreader.Modules import ValueModule
 
 
 class PasswordReaderTestCase(unittest.TestCase):
