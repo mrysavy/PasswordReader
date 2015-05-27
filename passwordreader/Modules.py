@@ -1,6 +1,7 @@
 import os
 import getpass
 import PasswordReader
+from sys import argv
 
 __all__ = ["PasswordReaderModule",
            "EnvironmentModule",
@@ -30,7 +31,7 @@ class FileModule(PasswordReader.PasswordReaderModule):
 
         if file_name.startswith('@'):
             file_name = os.path.join(
-                os.path.dirname(os.path.realpath(__file__)), file_name[1:])
+                os.path.dirname(os.path.realpath(argv[0])), file_name[1:])
 
         try:
             with open(file_name) as f:
